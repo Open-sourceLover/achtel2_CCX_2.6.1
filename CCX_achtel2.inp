@@ -8,7 +8,6 @@ Model: balk-equations with 2 terms
 *INCLUDE, INPUT=Eall.inp
 *INCLUDE, INPUT=Nbou.inp
 *INCLUDE, INPUT=Nload.inp
-**INCLUDE, INPUT=Neq.inp
 ***
 *MATERIAL,NAME=EL
 *ELASTIC
@@ -38,6 +37,8 @@ Nload,3,1.
 *NODE PRINT,NSET=Nall
 U
 *EL PRINT,ELSET=Eall
+S
+*NODE FILE
 S
 *END STEP
 
