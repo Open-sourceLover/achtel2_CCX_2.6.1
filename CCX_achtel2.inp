@@ -8,7 +8,7 @@ Model: balk-equations with 2 terms
 *INCLUDE, INPUT=Eall.inp
 *INCLUDE, INPUT=Nbou.inp
 *INCLUDE, INPUT=Nload.inp
-*INCLUDE, INPUT=Neq.inp
+**INCLUDE, INPUT=Neq.inp
 ***
 *MATERIAL,NAME=EL
 *ELASTIC
@@ -23,11 +23,11 @@ Nbou3,3
 ***
 *EQUATION
 2
-Neq178,1,1,Neq78,1,-1
+178,1,1,78,1,-1
 2
-Neq178,2,1,Neq78,2,-1
+178,2,1,78,2,-1
 2
-Neq178,3,1,Neq78,3,-1
+178,3,1,78,3,-1
 ***
 *STEP
 *STATIC
