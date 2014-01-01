@@ -1,0 +1,43 @@
+*HEADING
+Model: balk-equations with 2 terms
+**Calculix example from user manual
+**Structure: cube.
+**PS:Input deck modified
+***
+*INCLUDE, INPUT=Nall.inp
+*INCLUDE, INPUT=Eall.inp
+*INCLUDE, INPUT=Nbou.inp
+*INCLUDE, INPUT=Nload.inp
+*INCLUDE, INPUT=Neq.inp
+***
+*MATERIAL,NAME=EL
+*ELASTIC
+210000.,.3
+***
+*SOLID SECTION,MATERIAL=EL,ELSET=Eall
+***
+*BOUNDARY
+Nbou1,1,3
+Nbou2,2,3
+Nbou3,3
+***
+*EQUATION
+    2
+  Neq178,    1,        1.,   Neq78,    1,       -1.
+    2
+  Neq178,    2,        1.,   Neq78,    2,       -1.
+    2
+  Neq178,    3,        1.,   Neq78,    3,       -1.
+***
+*STEP
+*STATIC
+***
+*CLOAD
+Nload,3,1.
+***
+*NODE PRINT,NSET=Nall
+U
+*EL PRINT,ELSET=Eall
+S
+*END STEP
+

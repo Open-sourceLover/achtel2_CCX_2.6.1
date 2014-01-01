@@ -1,0 +1,12 @@
+**Boundary Constraint on node 1
+*NSET,NSET=Nbou1
+1
+***
+**Boundary Constraint on node 2
+*NSET,NSET=Nbou2
+2
+***
+**Boundary Constraint on node 4
+*NSET,NSET=Nbou3
+4
+***
